@@ -59,3 +59,6 @@ cat > $JUPYTER_CONFIG_DIR/lab/user-settings/@jupyterlab/fileeditor-extension/plu
     }
 }
 EOF
+
+## Installing C++ g
+## Installing
