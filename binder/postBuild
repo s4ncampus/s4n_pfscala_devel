@@ -62,8 +62,3 @@ cat > $JUPYTER_CONFIG_DIR/lab/user-settings/@jupyterlab/fileeditor-extension/plu
     }
 }
 EOF
-
-# Activate conda enviroment cling in order to enable xeus-cling kernel
-# conda init bash
-# conda activate cling
-conda activate /srv/conda/envs/notebook
