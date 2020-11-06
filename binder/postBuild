@@ -63,17 +63,3 @@ cat > $JUPYTER_CONFIG_DIR/lab/user-settings/@jupyterlab/fileeditor-extension/plu
 }
 EOF
 
-# Installing Jupyter C++ Kernel cling xeus-cling
-# Installing miniconda
-MiniConda=Miniconda3-latest-Linux-x86_64.sh
-curl -L -o $MiniCoda https://repo.anaconda.com/miniconda/$MiniConda
-chmod +x $MiniConda
-./$MiniConda -b
-# Start conda in order it modifies startup files (.bashrc, etc.)
-./miniconda3/bin/conda init
-source .bashrc
-# Installing cling by using conda
-conda create -n cling --yes
-conda activate cling
-conda install xeus-cling -c conda-forge --yes
-
