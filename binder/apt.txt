@@ -1,5 +1,4 @@
 openjdk-8-jre-headless
-haskell-stack
 python3-pip
 git
 libtinfo-dev
