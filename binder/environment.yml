@@ -1,4 +1,4 @@
-environment: cling
+name: cling
 channels:
   - conda-forge
 dependencies:
