@@ -8,3 +8,6 @@ libpango1.0-dev
 libmagic-dev
 libblas-dev
 liblapack-dev
+libffi-dev
+libgmp-dev
+zlib1g-dev

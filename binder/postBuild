@@ -64,7 +64,9 @@ cat > $JUPYTER_CONFIG_DIR/lab/user-settings/@jupyterlab/fileeditor-extension/plu
 EOF
 
 # Installing IHaskell Kernel
-curl -sSL https://get.haskellstack.org/ | sh
+printf "export PATH=\$PATH:\$HOME/bin:\$HOME/.local/bin" >> .bashrc
+source .bashrc
+curl -sSL https://get.haskellstack.org/ | sh -s - -d $HOME/bin
 git clone https://github.com/gibiansky/IHaskell
 cd IHaskell
 pip3 install -r requirements.txt
