@@ -68,6 +68,8 @@ git clone https://github.com/gibiansky/IHaskell
 cd IHaskell
 pip3 install -r requirements.txt
 stack upgrade
+pwd
+id
 # stack install gtk2hs-buildtools # Disabled for now because gtk2hs-buildtools doesn't work with lts-13 yet
 echo "stack install --fast"
 stack install --fast
