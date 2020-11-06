@@ -69,8 +69,7 @@ cd IHaskell
 pip3 install -r requirements.txt
 stack upgrade --binary-only
 # stack install gtk2hs-buildtools # Disabled for now because gtk2hs-buildtools doesn't work with lts-13 yet
-DIR=$(pwd)
-USER=$(who am i)
+[ -d $HOME/.stack ] && echo "$HOME/.stack exists" 
 echo "$DIR on $USER"
 echo "stack install --fast"
 stack install --fast
