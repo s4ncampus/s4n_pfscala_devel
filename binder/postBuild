@@ -64,15 +64,17 @@ cat > $JUPYTER_CONFIG_DIR/lab/user-settings/@jupyterlab/fileeditor-extension/plu
 EOF
 
 # Installing IHaskell Kernel
-printf "export PATH=\$PATH:\$HOME/bin:\$HOME/.local/bin" >> .bashrc
-source .bashrc
+cd
+if [ ! -d $HOME/bin ]
+then
+    mkdir $HOME/bin
+fi
+printf "export PATH=\$PATH:\$HOME/bin:\$HOME/.local/bin" >> $HOME/.bashrc
+source $HOME/.bashrc
 curl -sSL https://get.haskellstack.org/ | sh -s - -d $HOME/bin
 git clone https://github.com/gibiansky/IHaskell
-cd IHaskell
+pushd IHaskell
 pip3 install -r requirements.txt
-stack upgrade
-pwd
-id
 # stack install gtk2hs-buildtools # Disabled for now because gtk2hs-buildtools doesn't work with lts-13 yet
 echo "stack install --fast"
 stack install --fast
