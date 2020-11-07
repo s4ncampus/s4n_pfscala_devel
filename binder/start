@@ -10,10 +10,6 @@ conda activate /srv/conda/envs/notebook
 
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 
-export PATH=$PATH:$HOME/bin:$HOME/.local/bin
-
 args=$(shiftFirstParameter "$@")
-
-echo "Argumentos: $args"
 
 exec stack exec jupyter-notebook -- "$args"
